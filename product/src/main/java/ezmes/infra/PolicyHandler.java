@@ -24,22 +24,6 @@ public class PolicyHandler {
 
     @StreamListener(
         value = KafkaProcessor.INPUT,
-        condition = "headers['type']=='WorkOrderIssued'"
-    )
-    public void wheneverWorkOrderIssued_작업요청(
-        @Payload WorkOrderIssued workOrderIssued
-    ) {
-        WorkOrderIssued event = workOrderIssued;
-        System.out.println(
-            "\n\n##### listener 작업요청 : " + workOrderIssued + "\n\n"
-        );
-
-        // Sample Logic //
-        Production.작업요청(event);
-    }
-
-    @StreamListener(
-        value = KafkaProcessor.INPUT,
         condition = "headers['type']=='WorkOrderChanged'"
     )
     public void wheneverWorkOrderChanged_작업변경(

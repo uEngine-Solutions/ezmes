@@ -25,6 +25,7 @@ public class ProductionController {
     )
     public Production complete(
         @PathVariable(value = "id") Long id,
+        @RequestBody CompleteCommand completeCommand,
         HttpServletRequest request,
         HttpServletResponse response
     ) throws Exception {
@@ -35,7 +36,7 @@ public class ProductionController {
 
         optionalProduction.orElseThrow(() -> new Exception("No Entity Found"));
         Production production = optionalProduction.get();
-        production.complete();
+        production.complete(completeCommand);
 
         productionRepository.save(production);
         return production;

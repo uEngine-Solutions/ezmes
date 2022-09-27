@@ -6,6 +6,7 @@
         </v-card-title>
 
         <v-card-text>
+            <Number label="ItemCount" v-model="value.itemCount" :editMode="editMode"/>
         </v-card-text>
 
         <v-card-actions>
@@ -41,6 +42,7 @@
             value: {},
         }),
         created() {
+            this.value.itemCount = 0;
         },
         watch: {
         },

@@ -73,29 +73,9 @@ public class Production {
         return productionRepository;
     }
 
-    public void complete() {
+    public void complete(CompleteCommand completeCommand) {
         ProductionCompleted productionCompleted = new ProductionCompleted(this);
         productionCompleted.publishAfterCommit();
-    }
-
-    public static void 작업요청(WorkOrderIssued workOrderIssued) {
-        /** Example 1:  new item 
-        Production production = new Production();
-        repository().save(production);
-
-        */
-
-        /** Example 2:  finding and process
-        
-        repository().findById(workOrderIssued.get???()).ifPresent(production->{
-            
-            production // do something
-            repository().save(production);
-
-
-         });
-        */
-
     }
 
     public static void 작업변경(WorkOrderChanged workOrderChanged) {
