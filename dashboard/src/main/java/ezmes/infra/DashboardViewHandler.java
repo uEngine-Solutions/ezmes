@@ -31,7 +31,7 @@ public class DashboardViewHandler {
                 Long.valueOf(workOrderIssued.getOrdrAmnt())
             );
             dashboard.setRemain(Long.valueOf(workOrderIssued.getOrdrAmnt()));
-            dashboard.setProductionAmount(0);
+            dashboard.setProductionAmount(0L);
             // view 레파지 토리에 save
             dashboardRepository.save(dashboard);
         } catch (Exception e) {
@@ -46,7 +46,7 @@ public class DashboardViewHandler {
         try {
             if (!productionCompleted.validate()) return;
             // view 객체 조회
-            Optional<Dashboard> dashboardOptional = dashboardRepository.findByOrderId(
+            Optional<Dashboard> dashboardOptional = dashboardRepository.findById(
                 productionCompleted.getOrderId()
             );
 
@@ -72,7 +72,7 @@ public class DashboardViewHandler {
         try {
             if (!productionCompleted.validate()) return;
             // view 객체 조회
-            Optional<Dashboard> dashboardOptional = dashboardRepository.findByOrderId(
+            Optional<Dashboard> dashboardOptional = dashboardRepository.findById(
                 productionCompleted.getOrderId()
             );
 

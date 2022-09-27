@@ -8,13 +8,13 @@ import lombok.Data;
 public class ProductionCompleted extends AbstractEvent {
 
     private Long id;
-    private Date JOB_DT;
-    private String USER_ID;
-    private Long EQMT_ID;
-    private String ITM_NO;
-    private String ITM_NM;
-    private String ITM_STD;
-    private String ITM_CNT;
-    private String PRDT_CD;
+    private Date jobDt;
+    private String userId;
+    private Long eqmtId;
+    private String itmNo;
+    private String itmNm;
+    private String itmStd;
+    private String itmCnt;
+    private String prdtCd;
     private Long orderId;
 }
