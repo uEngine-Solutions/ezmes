@@ -23,7 +23,7 @@
             <String label="ItmNo" v-model="value.itmNo" :editMode="editMode"/>
             <String label="ItmNm" v-model="value.itmNm" :editMode="editMode"/>
             <String label="ItmStd" v-model="value.itmStd" :editMode="editMode"/>
-            <String label="ItmCnt" v-model="value.itmCnt" :editMode="editMode"/>
+            <Number label="ItmCnt" v-model="value.itmCnt" :editMode="editMode"/>
             <String label="PrdtCd" v-model="value.prdtCd" :editMode="editMode"/>
             <Number label="OrderId" v-model="value.orderId" :editMode="editMode"/>
         </v-card-text>

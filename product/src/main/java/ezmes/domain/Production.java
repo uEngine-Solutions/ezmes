@@ -32,7 +32,7 @@ public class Production {
 
     private String itmStd;
 
-    private String itmCnt;
+    private Long itmCnt;
 
     private String prdtCd;
 

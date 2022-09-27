@@ -119,7 +119,7 @@
                 'itmNo': '',
                 'itmNm': '',
                 'itmStd': '',
-                'itmCnt': '',
+                'itmCnt': 0,
                 'prdtCd': '',
                 'orderId': 0,
             }
