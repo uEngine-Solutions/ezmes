@@ -15,7 +15,7 @@ spring:
         - id: product
           uri: http://localhost:8082
           predicates:
-            - Path=/productions/**, /equipment/**, /workers/**, /materials/**, 
+            - Path=/productions/**, 
         - id: master
           uri: http://localhost:8083
           predicates:
@@ -54,7 +54,7 @@ spring:
         - id: product
           uri: http://product:8080
           predicates:
-            - Path=/productions/**, /equipment/**, /workers/**, /materials/**, 
+            - Path=/productions/**, 
         - id: master
           uri: http://master:8080
           predicates:
