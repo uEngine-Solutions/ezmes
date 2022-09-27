@@ -16,7 +16,7 @@ public class ProductionCompleted extends AbstractEvent {
     private String itmNo;
     private String itmNm;
     private String itmStd;
-    private String itmCnt;
+    private Long itmCnt;
     private String prdtCd;
     private Long orderId;
 

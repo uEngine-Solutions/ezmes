@@ -78,6 +78,8 @@ public class Production {
         setItmCnt(completeCommand.getItemCount());
 
         ProductionCompleted productionCompleted = new ProductionCompleted(this);
+
+
         productionCompleted.publishAfterCommit();
     }
 
