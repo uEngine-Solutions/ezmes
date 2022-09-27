@@ -24,7 +24,7 @@
                 <String label="ItmStd" v-model="item.itmStd" :editMode="editMode" @change="change" />
             </div>
             <div>
-                <String label="ItmCnt" v-model="item.itmCnt" :editMode="editMode" @change="change" />
+                <Number label="ItmCnt" v-model="item.itmCnt" :editMode="editMode" @change="change" />
             </div>
             <div>
                 <String label="PrdtCd" v-model="item.prdtCd" :editMode="editMode" @change="change" />
